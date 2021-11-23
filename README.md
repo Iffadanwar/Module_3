@@ -1,6 +1,6 @@
-#Election_Analysis
+# Election_Analysis
 
-##Project overview
+## Project overview
 An employee of a colorado commision has given me these tasks to audit a local congressonal election.
 
 1. calculate the total number of votes casted.
@@ -13,7 +13,7 @@ An employee of a colorado commision has given me these tasks to audit a local co
  - Data Source: election_results.csv
  - Software: Python 3.9.0, Spyder 5.1.5
 
-##Summary
+## Summary
 The election analysis shows:
 - There were "x" votes casted in the election.
 - The Candidates were:
@@ -27,6 +27,6 @@ The election analysis shows:
 - The winner of the election was:
     -Candidate (1,2, or 3) , who recived "x%" of the vote and "y" number of votes.
     
-  ## Challenge Overview
+## Challenge Overview
   
-  ## Challenge Summary
+## Challenge Summary
