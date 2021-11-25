@@ -67,26 +67,26 @@ the script used today was able to accurately extract vital information from the 
 If for example this script was used to count federal elections, vital data such as state, county, ZIP code, and city district would be required. However, if only state and county were to be considered the following changes would allow states to be an additional conditional factor to further help the commission break down results. assuming a new data set has state name listed on row "D".
 -  state_list = [] 
 -  state_dictionary = {}
-     with open(file_to_load) as election_data:
-     reader = csv.reader(election_data)
-     for row in reader:
-       state_list = row[3]
+     - with open(file_to_load) as election_data:
+     - reader = csv.reader(election_data)
+     - for row in reader:
+      -  state_list = row[3]
       ---this will allow us the have the list of state names into the state_list list.
-       if state_list not in state_name:
-            state_list.append(state_name)
-            state_dictionary[state_name] = 0
-            state_dictionary[state_name] += 1
-       --- this code will allow me to track votes of states and place them inot a dictionary for each   `            state.
-       for state_name in state_dictionary:
-        state_vote = state_dictionary.get(state_name)
-        state_rate = (float(state_vote) / float(state_votes)) * 100
+      - if state_list not in state_name:
+          -  state_list.append(state_name)
+          - state_dictionary[state_name] = 0
+          - state_dictionary[state_name] += 1
+     --- this code will allow me to track votes of states and place them inot a dictionary for each   `            state.
+       - for state_name in state_dictionary:
+        -  state_vote = state_dictionary.get(state_name)
+        -  state_rate = (float(state_vote) / float(state_votes)) * 100
        --- finally this last set of code will give us a state vote turnout and vote percentage.
 Another change that would make this script more universal is adding voting districts to the dataset giving the commission electoral college a capable voting calculating system. 
-       - the code for calculating voting districts are similar to implementing state results but adding the different districts up for a candidate will require additional work.
-         winning_counter = 0
-         candidiate_district_win_count = {}
+ - the code for calculating voting districts are similar to implementing state results but adding the different districts up for a candidate will require additional work.
+        - winning_counter = 0
+        - candidiate_district_win_count = {}
          - for winning_candidiate in candiaite_options
-              winning_counter += 1
-              candidate_results = (f"{candidate_name}: {winning_counter})\n")
+             - winning_counter += 1
+             - candidate_results = (f"{candidate_name}: {winning_counter})\n")
         ---the winning_counter will hold the number of districts a candidiate won.
         ---this can be used to see who won a presidential race.
